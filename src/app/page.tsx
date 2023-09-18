@@ -1,12 +1,14 @@
-"use client";
-import { useState } from "react";
-import {Card, CardHeader, CardBody, CardFooter, Avatar, Button} from "@nextui-org/react";
+//Left side
+import RecommendedContent from "@/components/recommendedContent/RecommendedContent";
+//Right side
+import VideosContent from "@/components/videosContent/VideosContent";
 
 export default function HomePage(){
 
-  const [isFollowed, setIsFollowed] = useState(false);
-
-  return (
-	 null
-  );
+  	return (
+		<section className="grid grid-cols-7 h-screen">
+			<RecommendedContent/>
+			<VideosContent/>
+		</section>
+  	);
 }

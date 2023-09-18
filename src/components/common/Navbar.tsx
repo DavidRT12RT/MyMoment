@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Button, Input } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { BsSearch,BsThreeDotsVertical } from "react-icons/bs";
+import { AiOutlineUser } from "react-icons/ai";
 import { RiAddFill } from "react-icons/ri";
 import InputLadingPage from "./InputLadingPage";
 
@@ -28,6 +28,11 @@ export default function Navbar(){
                     <li>
                         <Button color="primary" startContent={<RiAddFill className="text-white"/>}>
                             <Link href={`/upload`} className="text-white">Cargar</Link>
+                        </Button>
+                    </li>
+                    <li className="hidden md:block">
+                        <Button startContent={<AiOutlineUser/>}>
+                            <Link href={`/upload`}>Login</Link>
                         </Button>
                     </li>
                     <li>

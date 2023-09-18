@@ -1,0 +1,109 @@
+/* Styles for posts */
+.postCard {
+    width: 700px;
+    min-height: 800px;
+    max-height: 900px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+
+
+.postCard .postCardheader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.postCard .postCardheader img{
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 2rem;
+}
+
+.postCard .postCardbody{
+
+    width: 80%;
+    height: 100%;
+
+    padding:10px;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+
+}
+
+.postCard .postCardbody video{
+    grid-area: 1 / 1 / 2 / 5;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.postCard .postCardbody .interactionsBox {
+    grid-area: 1 / 5 / 2 / 6;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.postCard .postCardbody .interactionsBox li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (min-width:200px) and (max-width:600px){
+    .postCard{
+        width: 100%;
+    }
+
+    .postCard .postCardheader{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .postCard .postCardheader .description .tags{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .postCard .postCardbody{
+        width: 100%;
+        padding:0px;
+    }
+
+    .postCard .postCardbody video {
+        grid-area: 1 / 1 / 2 / 6;
+    } 
+
+    .postCard .postCardbody .interactionsBox{
+        z-index: 1000;
+        align-items: flex-end;
+        padding:10px;
+        color:white;
+    }
+
+}

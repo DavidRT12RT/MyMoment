@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Providers from './providers';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/common/Navbar';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: "Pokemon website",
-  	description: "Pokemon static website",
+	title: "MyMoment",
+  	description: "Tiktok Clon",
 }
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
 
 	return (
 		<html lang="en">
-      		<body className={inter.className}>
+      		<body className={inter.className} >
 				<Providers>
 					<Navbar/>
 					<main>{children}</main>

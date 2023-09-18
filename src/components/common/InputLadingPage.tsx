@@ -11,6 +11,8 @@ export default function InputLadingPage(){
                 isClearable
                 radius="lg"
                 placeholder="Type to search..."
+                value=""
+                onChange={onOpen}
                 onClick={onOpen}
                 startContent={
                     <BsSearch className="text-black/50 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
